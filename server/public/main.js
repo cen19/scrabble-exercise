@@ -28,7 +28,7 @@ let submit = function() {
     findWords.onreadystatechange = function() {
       if (this.readyState === 4 && this.status === 200) {
         console.log(this.responseText, typeof this.responseText);
-
+        document.getElementById('results').value = this.responseText;
       }
     };
 
